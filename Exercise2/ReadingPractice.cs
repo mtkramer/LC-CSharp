@@ -18,6 +18,7 @@ namespace Exercise2
             gb.PrintRoster();
         }
 
+
         public class GradeBook
         {
             public Dictionary<string, double> Students { get; }

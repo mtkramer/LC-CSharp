@@ -6,16 +6,20 @@ namespace Studio1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the radius for a circle: ");
-            double radius = double.Parse(Console.ReadLine());
+            double radius = -1;
+            while(radius <= 0)
+            {
+                Console.WriteLine("Enter the radius for a circle: ");
+                radius = double.Parse(Console.ReadLine());
+            }
             Circle c = new Circle(radius);
-            Console.WriteLine(c.Desc("Area"));
-            Console.WriteLine(c.Desc("Circumference"));
-            Console.WriteLine(c.Desc("Diameter"));
+            c.Desc("Area");
+            c.Desc("Circumference");
+            c.Desc("Diameter");
             Console.WriteLine();
             Console.WriteLine("What is the car's mileage?");
             double mileage = double.Parse(Console.ReadLine());
-            double fuel = c.Circumference / mileage;
+            double fuel = Math.Round(c.Circumference / mileage, c.Precision);
             Console.WriteLine("You will use {0} gallons of fuel to travel the {1} miles around the circle", fuel, c.Circumference);
         }
 
@@ -29,19 +33,23 @@ namespace Studio1
             public Circle(double radius)
             {
                 Radius = radius;
-                Precision = Radius.ToString().Length;
+                if (Radius.ToString().Contains('.')){
+                    string temp = Radius.ToString();
+                    Precision = temp.Length - temp.IndexOf('.') - 1;
+                }
+                else { Precision = Radius.ToString().Length; }
                 Area = Math.Round(Math.PI * Math.Pow(Radius, 2), Precision);
                 Circumference = Math.Round(2 * Math.PI * Radius, Precision);
-                Diameter = Math.Round(2 * Radius, Precision);
+                Diameter = 2 * Radius;
             }
-            public string Desc(string prop) {
-                double calc;
+            public void Desc(string prop) {
+                double calc = 0;
                 if (prop.Equals("Area")) { calc = Area; }
                 else if (prop.Equals("Circumference")) { calc = Circumference; }
                 else if (prop.Equals("Diameter")) { calc = Diameter; }
-                else { return "***INVALID PARAM***"; }
+                else { Console.WriteLine("***INVALID PARAM***"); }
 
-                return "The " + prop + " of the circle of radius " + Radius + " is: " + calc;
+                Console.WriteLine("The {0} of the circle of radius {1} is: {2}", prop, Radius, calc);
             }
         }
 

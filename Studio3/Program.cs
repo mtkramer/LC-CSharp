@@ -26,11 +26,9 @@ namespace Studio3
         public class Counter
         {
             public Dictionary<string, int> Buckets { get; } = new Dictionary<string, int>();
-        public void Count(string str)
+            public void Count(string str)
             {
                 char[] data = str.ToLower().ToCharArray();
-
-
                 foreach(char c in data)
                 {
                     if( Equals(c, ',') || Equals(c, '.') || Equals(c, ' ') ) { continue; }

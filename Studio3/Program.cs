@@ -12,12 +12,15 @@ namespace Studio3
                 "Nunc accumsan sem ut ligula scelerisque sollicitudin. Ut at sagittis augue. " +
                 "Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit amet suscipit metus, non lobortis massa. " +
                 "Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget massa. Donec nec velit non ligula efficitur luctus.";
-            Counter counter = new Counter();
-            counter.Count(str);
-            counter = new Counter();
+            Counter counter1 = new Counter();
+            counter1.Count(str);
+            Counter counter2 = new Counter();
             Console.WriteLine("Please enter a string to be counted below.");
             str = Console.ReadLine();
-            counter.Count(str);
+            counter2.Count(str);
+            str = System.IO.File.ReadAllText(@"C:\Users\theos\OneDrive\Desktop\LC-CSharp\Studio3\TextFile.txt");
+            Counter counter3 = new Counter();
+            counter3.Count(str);
         }
 
         public class Counter
@@ -30,7 +33,7 @@ namespace Studio3
 
                 foreach(char c in data)
                 {
-                    if( Equals(c, ',') || Equals(c, '.')) { break; }
+                    if( Equals(c, ',') || Equals(c, '.') || Equals(c, ' ') ) { continue; }
                     string key = c + "";
                     if (!Buckets.ContainsKey(key)) {
                         Buckets.Add(key, 1);

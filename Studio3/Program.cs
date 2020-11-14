@@ -11,8 +11,12 @@ namespace Studio3
             string str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                 "Nunc accumsan sem ut ligula scelerisque sollicitudin. Ut at sagittis augue. " +
                 "Praesent quis rhoncus justo. Aliquam erat volutpat. Donec sit amet suscipit metus, non lobortis massa. " +
-                "Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget massa. Donec nec velit non ligula efficitur luctus";
+                "Vestibulum augue ex, dapibus ac suscipit vel, volutpat eget massa. Donec nec velit non ligula efficitur luctus.";
             Counter counter = new Counter();
+            counter.Count(str);
+            counter = new Counter();
+            Console.WriteLine("Please enter a string to be counted below.");
+            str = Console.ReadLine();
             counter.Count(str);
         }
 
@@ -21,9 +25,12 @@ namespace Studio3
             public Dictionary<string, int> Buckets { get; } = new Dictionary<string, int>();
         public void Count(string str)
             {
-                char[] data = str.ToCharArray();
+                char[] data = str.ToLower().ToCharArray();
+
+
                 foreach(char c in data)
                 {
+                    if( Equals(c, ',') || Equals(c, '.')) { break; }
                     string key = c + "";
                     if (!Buckets.ContainsKey(key)) {
                         Buckets.Add(key, 1);

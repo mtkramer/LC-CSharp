@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Reading6_Unit_Tests
+namespace Exercise6_Unit_Tests
 {
     class Program
     {

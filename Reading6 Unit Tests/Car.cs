@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Reading6_Unit_Tests
+namespace Exercise6_Unit_Tests
 {
     public class Car
     {

@@ -6,8 +6,7 @@ namespace Exercise7_Inheritance
     {
         static void Main(string[] args)
         {
-            Greeting hello = new Greeting("English", "Hello Coder!");
-            hello.Wave();
+            
         }
     }
 }

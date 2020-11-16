@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Reading5
+namespace Reading5_Classes_Pt2_Obj
 {
     public class Pet
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Studio4
+namespace Studio4_Classes_Pt1
 {
     class Menu
     {

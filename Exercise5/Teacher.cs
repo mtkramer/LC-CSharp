@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Exercise5
+namespace Exercise5_Classes_Pt2_Obj
 {
     class Teacher
     {

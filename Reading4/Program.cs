@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Reading4
+namespace Reading4_Classes_Pt1
 {
     class Program
     {

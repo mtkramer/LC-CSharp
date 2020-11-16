@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Studio1
+namespace Studio2_Data_Types
 {
     class Program
     {

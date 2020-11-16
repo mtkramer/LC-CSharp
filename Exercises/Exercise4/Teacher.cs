@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Exercise4
+namespace Exercise4_Classes_Pt1
 {
     class Teacher
     {

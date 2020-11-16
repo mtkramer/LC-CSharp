@@ -2,7 +2,7 @@
 using System.Text;
 using System.Collections.Generic;
 
-namespace Exercise2
+namespace Reading3_Collections
 {
     class ReadingPractice
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Studio4
+namespace Studio4_Classes_Pt1
 {
     class Program
     {

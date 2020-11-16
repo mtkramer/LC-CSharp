@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Studio3
+namespace Studio3_Collections
 {
     class Program
     {

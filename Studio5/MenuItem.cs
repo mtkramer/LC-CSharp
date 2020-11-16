@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Studio5
+namespace Studio5_Classes_Pt2_Obj
 {
     class MenuItem
     {

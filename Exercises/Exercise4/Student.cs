@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise4
+namespace Exercise4_Classes_Pt1
 {
     public class Student
     {

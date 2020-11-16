@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise1
+namespace Exercise2_Data_Types
 {
     class Program
     {

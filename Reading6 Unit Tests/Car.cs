@@ -43,6 +43,12 @@ namespace Exercise6_Unit_Tests
             GasTankLevel -= gallonsUsed;
             Odometer += milesAbleToTravel;
         }
-
+        public void AddGas(double gas)
+        {
+            if(GasTankLevel + gas > GasTankSize) { 
+                throw new ArgumentOutOfRangeException("Cannot add more gas than tank can hold.");
+            }
+            else { GasTankLevel += gas; }
+        }
     }
 }

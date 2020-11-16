@@ -14,4 +14,8 @@
     <PackageReference Include="coverlet.collector" Version="1.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Studio6 Unit Tests Balanced Brackets\Studio6 Unit Tests Balanced Brackets.csproj" />
+  </ItemGroup>
+
 </Project>

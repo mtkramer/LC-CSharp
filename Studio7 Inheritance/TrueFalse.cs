@@ -11,8 +11,7 @@ namespace Studio7_Inheritance
             string template = $"{text}?\n\n";
             template += "Please enter true or false: ";
             Console.Write(template);
-            string input = Console.ReadLine().ToUpper();
-            Response = input[0].ToString();
+            Response = Console.ReadLine().ToUpper().ToCharArray();
         }
 
     }

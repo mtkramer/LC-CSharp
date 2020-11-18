@@ -15,18 +15,20 @@ namespace Studio7_Inheritance
                     "Which coding language is your favorite?", 
                     new string[] { "Java", "C#", "JavaScrip", "Pyton" }
                 ), 
-                new string[] { "C#" }
+                new char[] { 'B' }
             );
             q.AddPair(
                 new CheckBox(
                     "Which coding languages are used by the browser?",
                     new string[] { "JavaScript", "CSS", "XML", "Rust", "Ruby", "HTML" }
                 ),
-                new string[] { "JavaScript", "CSS", "HTML" }
+                new char[] { 'A', 'B', 'F' }
             );
-            q.AddPair(new TrueFalse("Coding is easy?"), new string[] { "True" });
+            q.AddPair(new TrueFalse("Coding is easy?"), new char[] { 'T' });
 
             q.StartQuiz();
+            q.GradeQuiz();
+
         }   
     }
 }

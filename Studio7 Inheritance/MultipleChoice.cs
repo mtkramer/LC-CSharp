@@ -21,8 +21,7 @@ namespace Studio7_Inheritance
             }
             template += "Please enter the letter of your answer: ";
             Console.Write(template);
-            string input = Console.ReadLine().ToUpper();
-            Response = input[0].ToString();
+            Response = Console.ReadLine().ToUpper().ToCharArray();
         }
 
 

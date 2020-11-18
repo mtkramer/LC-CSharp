@@ -4,7 +4,7 @@ namespace Studio7_Inheritance
     class Question
     {
         public readonly string text;
-        public string Response;
+        public char[] Response;
 
         public Question(string text)
         {

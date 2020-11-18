@@ -21,7 +21,7 @@ namespace Studio7_Inheritance
             }
             template += "Please enter letters for all that apply: ";
             Console.Write(template);
-            Response = Console.ReadLine().ToUpper();
+            Response = Console.ReadLine().ToUpper().ToCharArray();
         }
 
 

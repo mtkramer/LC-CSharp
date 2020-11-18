@@ -6,41 +6,37 @@ namespace Studio7_Inheritance
 {
     class Quiz
     {
-        private uint Number { get; set; } = 1;
+        private uint IdNumber { get; set; } = 1;
         private readonly Dictionary<uint, Question> Questions;
-        private readonly Dictionary<uint, string> Answers;
+        private readonly Dictionary<uint, string[]> Answers;
         
-        public Quiz() { }
+        public Quiz() 
+        { 
+            Questions = new Dictionary<uint, Question>();
+            Answers = new Dictionary<uint, string[]>();
+        }
 
-        public void AddQ()
+        public void AddPair(Question question, string[] answer)
         {
-            Console.Write("Add question text: ");
-            string text = Console.ReadLine();
-            Console.Write("Choose question type: 1.) Multiple Choice  2.) Checkbox  3.) True or False: ");
-            int type = int.Parse(Console.ReadLine());
-            
-            if(type == 1)
+            Questions.Add(IdNumber, question);
+            Answers.Add(IdNumber, answer);
+            IdNumber++;
+        }
+
+        public void StartQuiz()
+        {
+            foreach (uint key in Questions.Keys)
             {
-                string[] choices = new string[4];
-                for (uint i=1; i<5; i++)
-                {
-                    Console.Write($"Answer choice {i}: ");
-                    choices[i - 1] = Console.ReadLine();
-                }
-                MultipleChoice m = new MultipleChoice(text, choices);
-                Questions.Add(Number, m);
+                Console.WriteLine("____________________");
+                Console.WriteLine($"Question: #{key}");
+                Questions[key].Ask();
             }
-            else if(type == 2) { 
-                
-            }
-            else { }
-            Console.Write("Add correct answers: ");
-            string input = Console.ReadLine().ToUpper();
-            Answers.Add(Number, input);
-            Number++;
+        }
+
+        public void GradeQuiz()
+        {
+
         }
 
     }
 }
-//  $"______________________________\nQuestion #{id}\n{text}?\n\n";
-//  template += "Enter your answer: ";

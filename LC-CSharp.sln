@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Studio7 Inheritance", "Stud
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reading8 Interfaces", "Reading8 Interfaces\Reading8 Interfaces.csproj", "{F6A548B9-A8A7-43C9-8935-087E0EFAC36A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8 Interfaces", "Exercise8 Interfaces\Exercise8 Interfaces.csproj", "{9ADA6F6D-33AA-4F67-9B2F-690E2E6228FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise8 Interfaces", "Exercise8 Interfaces\Exercise8 Interfaces.csproj", "{9ADA6F6D-33AA-4F67-9B2F-690E2E6228FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studio8 Interfaces", "Studio8 Interfaces\Studio8 Interfaces.csproj", "{721A032E-C08A-4AFA-93AF-41D040841F8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{9ADA6F6D-33AA-4F67-9B2F-690E2E6228FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9ADA6F6D-33AA-4F67-9B2F-690E2E6228FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9ADA6F6D-33AA-4F67-9B2F-690E2E6228FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721A032E-C08A-4AFA-93AF-41D040841F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721A032E-C08A-4AFA-93AF-41D040841F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721A032E-C08A-4AFA-93AF-41D040841F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721A032E-C08A-4AFA-93AF-41D040841F8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +166,7 @@ Global
 		{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5} = {7969C462-8682-4890-B5C6-7F25C18E8185}
 		{F6A548B9-A8A7-43C9-8935-087E0EFAC36A} = {CC1B9C7A-E662-4919-9E23-A4F9BB85CED6}
 		{9ADA6F6D-33AA-4F67-9B2F-690E2E6228FE} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
+		{721A032E-C08A-4AFA-93AF-41D040841F8C} = {7969C462-8682-4890-B5C6-7F25C18E8185}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C89A3ACB-845F-4781-9325-04DD532ED86E}

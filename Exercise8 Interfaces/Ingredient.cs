@@ -19,7 +19,12 @@ namespace Exercise8_Interfaces
 
         public override string ToString()
         {
-            return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + Allergens + "\n";
+            string allergenString = "";
+            foreach(string allergen in Allergens)
+            {
+                allergenString += allergen + ", ";
+            }
+            return "Name: " + Name + "\n" + "Cost: $" + Cost + "\n" + "Allergens: " + allergenString + "\n";
         }
     }
 }

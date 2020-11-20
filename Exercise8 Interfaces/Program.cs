@@ -13,12 +13,19 @@ namespace Exercise8_Interfaces
 
             availableFlavors.Sort(new FlavorComparer());
 
-            // TODO: Use a Comparator class to sort the 'cones' array in increasing order by the 'cost'
-            //  field.
-
             availableCones.Sort(new ConeComparer());
 
-            // TODO: Print the 'flavors' and 'cones' lists (in a clear manner) to verify the sorting.
+            Console.WriteLine("Flavor list sorted by number of Allergens");
+            foreach(Flavor flavor in availableFlavors)
+            {
+                Console.WriteLine(flavor);
+            }
+            Console.WriteLine("\nCone list sorted by Cost");
+            foreach (Cone cone in availableCones)
+            {
+                Console.WriteLine(cone);
+            }
+
         }
     }
 }

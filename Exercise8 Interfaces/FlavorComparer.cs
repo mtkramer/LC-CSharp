@@ -8,7 +8,7 @@ namespace Exercise8_Interfaces
     {
         public int Compare(Flavor a, Flavor b)
         {
-            return string.Compare(a.Name, b.Name);
+            return string.Compare(a.Allergens.Count.ToString(), b.Allergens.Count.ToString());
         }
     }
 }

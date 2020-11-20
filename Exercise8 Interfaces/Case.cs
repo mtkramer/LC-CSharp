@@ -33,4 +33,5 @@ namespace Exercise8_Interfaces
             Flavors.Add(flavor4);
             Flavors.Add(flavor5);
         }
+    }
 }

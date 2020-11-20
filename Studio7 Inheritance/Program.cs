@@ -5,10 +5,6 @@ namespace Studio7_Inheritance
     {
         static void Main(string[] args)
         {
-            // MultipleChoice: text: "Which coding language is your favorite?", "Java", "C#", "JavaScrip", "Pyton"
-            // CheckBox: text: "Which coding languages are used by the browser?", "JavaScript", "CSS", "XML", "Rust", "Ruby", "HTML"
-            // TrueFalse: text: "Coding is easy?", "True"
-
             Quiz q = new Quiz();
             q.AddPair(
                 new MultipleChoice(

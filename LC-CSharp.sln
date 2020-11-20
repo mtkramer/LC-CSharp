@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise7 Inheritance", "Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise7 Tests", "Exercise7 Tests\Exercise7 Tests.csproj", "{DE54949B-3EFE-4D49-B132-32E0D9DEFE9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studio7 Inheritance", "Studio7 Inheritance\Studio7 Inheritance.csproj", "{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Studio7 Inheritance", "Studio7 Inheritance\Studio7 Inheritance.csproj", "{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reading8 Interfaces", "Reading8 Interfaces\Reading8 Interfaces.csproj", "{F6A548B9-A8A7-43C9-8935-087E0EFAC36A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A548B9-A8A7-43C9-8935-087E0EFAC36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A548B9-A8A7-43C9-8935-087E0EFAC36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A548B9-A8A7-43C9-8935-087E0EFAC36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A548B9-A8A7-43C9-8935-087E0EFAC36A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +152,7 @@ Global
 		{ED598CC5-1941-44C0-8450-A876BF4225C0} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 		{DE54949B-3EFE-4D49-B132-32E0D9DEFE9E} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 		{6785C3D5-2DD1-4D8B-987C-78AE1A268FA5} = {7969C462-8682-4890-B5C6-7F25C18E8185}
+		{F6A548B9-A8A7-43C9-8935-087E0EFAC36A} = {CC1B9C7A-E662-4919-9E23-A4F9BB85CED6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C89A3ACB-845F-4781-9325-04DD532ED86E}

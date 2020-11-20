@@ -6,17 +6,24 @@ namespace Studio8_Interfaces
     {
         static void Main(string[] args)
         {
-            // TODO: Declare and initialize a CD and a DVD object.
+            DVD dvd = new DVD();
+            CD cd = new CD();
 
-            // TODO: Call each CD and DVD method to verify that they work as expected.
+            dvd.PlayDisc();
+            dvd.LoadDisc();
+            dvd.WriteData("Waterworld", 200);
+            dvd.PlayDisc();
+            dvd.WriteData("Batman Begins", 95);
+            dvd.PlayDisc();
+
+            Console.WriteLine("\n\n");
+
+            cd.PlayDisc();
+            cd.LoadDisc();
+            cd.WriteData("The Hobbit", 200);
+            cd.PlayDisc();
+            cd.WriteData("Cyberpunk Mix", 90);
+            cd.PlayDisc();
         }
     }
 }
-/*
-They both spin. I
-They both store data. A
-Data gets written to the discs by using a laser. I
-The data on the discs can be read by using a laser. I
-Once loaded, they both report information like name, capacity, contents, and disc type I
-above properties
- */

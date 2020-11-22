@@ -57,12 +57,3 @@ namespace Exercise10_Controllers.Controllers
 
     }
 }
-/*
-Modify your HelloController class to display a form on a GET request that asks the user for both their name and the 
-language they would like to be greeted in
-Chinese => Ni Hao
-French => Bonjour
-German => Hallo
-Spanish => Hola
-English => Hello
- */

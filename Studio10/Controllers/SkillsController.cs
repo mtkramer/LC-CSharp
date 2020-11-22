@@ -80,12 +80,33 @@ namespace Studio10.Controllers
             else
             {
                 return
-                    $"<h1>Updated on {date}</h1>" +
-                    $"<p>C# learning progress: {cs}</p>" +
-                    $"<p>JavaScript learning progress: {js}</p>" +
-                    $"<p>Python learning progress: {py}</p>";
+                    "<table style='border: 1px solid #333;'>" +
+                        "<thead style='background-color: #999; color: #fff;'>" +
+                            "<tr>" +
+                                $"<th colspan='2'>Updated on {date}</th>" +
+                            "</tr>" +
+                        "</thead>" +
+                        "<tbody>" +
+                            "<tr>" +
+                                $"<td style='border: 1px solid #333;'>C# learning progress: </td>" +
+                                $"<td style='border: 1px solid #333;'>{cs}</td>" +
+                            "</tr>" +
+                            "<tr>" +
+                                $"<td style='border: 1px solid #333;'>JavaScript learning progress: </td>" +
+                                $"<td style='border: 1px solid #333;'>{js}</td>" +
+                            "</tr>" +
+                            "<tr>" +
+                                $"<td style='border: 1px solid #333;'>Python learning progress: </td>" +
+                                $"<td style='border: 1px solid #333;'>{py}</td>" +
+                            "</tr>" +
+                        "</tbody>" +
+                    "</table>";
             }
         }
 
     }
 }
+/*
+Reformat your form page to use a table instead of an ordered list.
+Add a new path to the site to display the information from the completed form.
+*/

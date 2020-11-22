@@ -23,15 +23,14 @@ namespace Studio10.Controllers
             return Content(html, "text/html");
         }
 
-        [HttpGet("form")]
-        [HttpPost("form")]
         // /<controller>/form
+        [HttpGet("form")]
         public IActionResult Form(string date = "", string cs = "", string js = "", string py = "")
         {
             string dt = DateTime.Now.ToString("yyyy'-'MM'-'dd");
-            string html = 
+            string html =
                 "<h1>Update Learning Progress</h1>" +
-                "<form>" +
+                "<form method='post' action='/skills/update'>" +
                     "<div>" +
                         "<label for='date'>Today's Date:</label>" +
                         $"<input id='date' type='date' name='date' value='{dt}'></input>" +
@@ -69,44 +68,45 @@ namespace Studio10.Controllers
                     "<div>" +
                         "<input type='submit' value='Update Progress'></input>" +
                     "</div>" +
-                "</form>" +
-                $"{Update(date, cs, js, py)}";
+                "</form>";
             return Content(html, "text/html");
         }
 
-        public static string Update(string date = "", string cs = "", string js = "", string py = "")
+        // GET: /<controller>/update
+        [HttpPost("update")]
+        public IActionResult Update(string date, string cs, string js, string py)
         {
-            if (date.Equals("")) { return ""; }
-            else
-            {
-                return
-                    "<table style='border: 1px solid #333;'>" +
-                        "<thead style='background-color: #999; color: #fff;'>" +
-                            "<tr>" +
-                                $"<th colspan='2'>Updated on {date}</th>" +
-                            "</tr>" +
-                        "</thead>" +
-                        "<tbody>" +
-                            "<tr>" +
-                                $"<td style='border: 1px solid #333;'>C# learning progress: </td>" +
-                                $"<td style='border: 1px solid #333;'>{cs}</td>" +
-                            "</tr>" +
-                            "<tr>" +
-                                $"<td style='border: 1px solid #333;'>JavaScript learning progress: </td>" +
-                                $"<td style='border: 1px solid #333;'>{js}</td>" +
-                            "</tr>" +
-                            "<tr>" +
-                                $"<td style='border: 1px solid #333;'>Python learning progress: </td>" +
-                                $"<td style='border: 1px solid #333;'>{py}</td>" +
-                            "</tr>" +
-                        "</tbody>" +
-                    "</table>";
-            }
+            return Content($"{UpdateLearning(date, cs, js, py)}", "text/html");
+        }
+        
+        public static string UpdateLearning(string date, string cs, string js, string py)
+        {
+            return
+                "<table style='border: 1px solid #333;'>" +
+                    "<thead style='background-color: #999; color: #fff;'>" +
+                        "<tr>" +
+                            $"<th colspan='2'>Updated on {date}</th>" +
+                        "</tr>" +
+                    "</thead>" +
+                    "<tbody>" +
+                        "<tr>" +
+                            $"<td style='border: 1px solid #333;'>C# learning progress: </td>" +
+                            $"<td style='border: 1px solid #333;'>{cs}</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                            $"<td style='border: 1px solid #333;'>JavaScript learning progress: </td>" +
+                            $"<td style='border: 1px solid #333;'>{js}</td>" +
+                        "</tr>" +
+                        "<tr>" +
+                            $"<td style='border: 1px solid #333;'>Python learning progress: </td>" +
+                            $"<td style='border: 1px solid #333;'>{py}</td>" +
+                        "</tr>" +
+                    "</tbody>" +
+                "</table>";
         }
 
     }
 }
 /*
-Reformat your form page to use a table instead of an ordered list.
 Add a new path to the site to display the information from the completed form.
 */

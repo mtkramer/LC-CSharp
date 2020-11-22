@@ -15,6 +15,14 @@ namespace Exercise10_Controllers.Controllers
         {
             string html = "<form method='post' action='/helloworld/welcome/'>" +
                 "<input type='text' name='name' />" +
+                "<label for='lang'>Choose a Language:</label>" +
+                "<select id='lang' name='lang'>" +
+                "<option value='en'>--Please choose an option--</option>" +
+                "<option value='ch'>Chinese</option>" +
+                "<option value='fr'>French</option>" +
+                "<option value='ge'>German</option>" +
+                "<option value='sp'>Spanish</option>" +
+                "</select>" +
                 "<input type='submit' value='Greet Me!' />" +
                 "</form>";
             return Content(html, "text/html");
@@ -22,10 +30,39 @@ namespace Exercise10_Controllers.Controllers
         // GET: /<controller>/welcome
         [HttpGet("welcome/{name?}")]
         [HttpPost("welcome")]
-        public IActionResult Welcome(string name = "World")
+        public IActionResult Welcome(string name = "World", string lang = "en")
         {
-            return Content($"<h1>Welcome to my app, {name}!</h1>", "text/html");
+            return Content(CreateMessage(name, lang), "text/html");
+        }
+
+        public static string CreateMessage(string name, string lang)
+        {
+            string hello = "Hello";
+            switch (lang)
+            {
+                case "ch":
+                    hello = "Ni Hao"; break;
+                case "fr":
+                    hello = "Bonjour"; break;
+                case "ge":
+                    hello = "Hallo"; break;
+                case "sp":
+                    hello = "Hola"; break;
+                default:
+                    hello = "Hello"; break;
+
+            }
+            return $"<h1>{hello}, { name}!</h1>";
         }
 
     }
 }
+/*
+Modify your HelloController class to display a form on a GET request that asks the user for both their name and the 
+language they would like to be greeted in
+Chinese => Ni Hao
+French => Bonjour
+German => Hallo
+Spanish => Hola
+English => Hello
+ */

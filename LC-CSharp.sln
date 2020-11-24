@@ -53,7 +53,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Studio8 Interfaces", "Studi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise10 Controllers", "Exercise10 Controllers\Exercise10 Controllers.csproj", "{6369B9E9-1227-49E6-A16F-BFD1C8F4FBD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studio10", "Studio10\Studio10.csproj", "{9E50C407-9944-4344-93B3-576266E52AF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Studio10", "Studio10\Studio10.csproj", "{9E50C407-9944-4344-93B3-576266E52AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise11 Exceptions", "Exercise11 Exceptions\Exercise11 Exceptions.csproj", "{2EEE55F5-2908-416F-857A-E38E1D52E2C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{9E50C407-9944-4344-93B3-576266E52AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E50C407-9944-4344-93B3-576266E52AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E50C407-9944-4344-93B3-576266E52AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEE55F5-2908-416F-857A-E38E1D52E2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEE55F5-2908-416F-857A-E38E1D52E2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEE55F5-2908-416F-857A-E38E1D52E2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEE55F5-2908-416F-857A-E38E1D52E2C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +187,7 @@ Global
 		{721A032E-C08A-4AFA-93AF-41D040841F8C} = {7969C462-8682-4890-B5C6-7F25C18E8185}
 		{6369B9E9-1227-49E6-A16F-BFD1C8F4FBD1} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 		{9E50C407-9944-4344-93B3-576266E52AF4} = {7969C462-8682-4890-B5C6-7F25C18E8185}
+		{2EEE55F5-2908-416F-857A-E38E1D52E2C7} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C89A3ACB-845F-4781-9325-04DD532ED86E}

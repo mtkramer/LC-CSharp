@@ -12,10 +12,10 @@ namespace Reading13_Razor_Templates.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-
+            ViewBag.name = "Mike";
             return View();
         }
-
+        
         [HttpPost]
         [Route("/hello")]
         public IActionResult Welcome(string name = "World")

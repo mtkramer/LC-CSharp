@@ -3,8 +3,14 @@
 *@
 @{
 }
-<h1>@ViewBag.name</h1>
+<h1>The ViewBag.name is: @ViewBag.name</h1>
 <form method='post' action='/hello'>
     <input type='text' name='name' />
     <input type='submit' value='Greet Me!' />
 </form>
+<ol>
+    @foreach(string coffee in ViewBag.Coffees)
+    {
+        <li>@coffee</li>
+    }
+</ol>

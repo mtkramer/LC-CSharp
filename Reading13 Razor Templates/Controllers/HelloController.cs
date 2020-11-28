@@ -13,7 +13,8 @@ namespace Reading13_Razor_Templates.Controllers
         public IActionResult Index()
         {
             ViewBag.name = "Mike";
-            ViewBag.Coffees = new string[] { "French roast", "Espresso", "Kopi Luwak", "Instant" };
+            ViewBag.Coffees = new List<string>();
+            ViewBag.Coffees.AddRange(new List<string> { "French Roast", "Espresso", "Kopi Luwak", "Instant" });
             return View();
         }
         

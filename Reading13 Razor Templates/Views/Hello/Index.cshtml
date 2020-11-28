@@ -8,9 +8,17 @@
     <input type='text' name='name' />
     <input type='submit' value='Greet Me!' />
 </form>
-<ol>
-    @foreach(string coffee in ViewBag.Coffees)
-    {
-        <li>@coffee</li>
-    }
-</ol>
+@if(ViewBag.Coffees.Count > 0)
+{
+    <h2>We have coffees!</h2>
+    <ol>
+        @foreach (string coffee in ViewBag.Coffees)
+        {
+            <li>@coffee</li>
+        }
+    </ol>
+}
+else
+{
+    <p>Sorry, no coffee.</p>
+}

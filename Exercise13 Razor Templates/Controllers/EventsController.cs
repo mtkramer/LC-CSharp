@@ -14,10 +14,26 @@ namespace Exercise13_Razor_Templates.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            Events.AddRange(new List<string>() { "String Loop", "Grace Hopper", "Code With Pride" });
             ViewBag.events = Events;
 
             return View();
         }
+
+        // GET: /<controller>/add
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/Events/Add")]
+        public IActionResult NewEvent(string name)
+        {
+            Events.Add(name);
+
+            return Redirect("/Events");
+        }
+
     }
 }

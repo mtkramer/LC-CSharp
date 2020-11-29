@@ -10,9 +10,9 @@
 }
 else 
 {
-    @foreach(string meeting in ViewBag.events)
+    @foreach(string key in ViewBag.events.Keys)
     {
-        <li>@meeting</li>
+        <li>@key: @ViewBag.events[key]</li>
     }
 }
 

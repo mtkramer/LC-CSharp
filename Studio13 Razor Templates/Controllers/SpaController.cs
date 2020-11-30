@@ -40,7 +40,7 @@ namespace SpaDay.Controllers
 
         [HttpPost]
         [Route("/spa")]
-        public IActionResult Menu(string name, string skintype, string manipedi)
+        public IActionResult Menu(string name, string skinType, string maniPedi)
         {
             List<string> facials = new List<string>()
             {
@@ -50,14 +50,24 @@ namespace SpaDay.Controllers
             List<string> appropriateFacials = new List<string>();
             for (int i = 0; i < facials.Count; i++)
             {
-                if (CheckSkinType(skintype, facials[i]))
+                if (CheckSkinType(skinType, facials[i]))
                 {
                     appropriateFacials.Add(facials[i]);
                 }
             }
+            
+            ViewBag.name = name;
+            ViewBag.skinType = skinType;
+            ViewBag.appropriateFacials = appropriateFacials;
+
             return View();
         }
 
 
     }
 }
+/*
+1. Display the user’s name and skin type under their customer profile.
+2. Display the appropriate facial treatments for their skin type.
+3. Display the description of the spa’s manicures or pedicures depending on the user’s interest 
+*/

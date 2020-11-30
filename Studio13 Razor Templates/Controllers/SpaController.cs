@@ -68,7 +68,7 @@ namespace SpaDay.Controllers
     }
 }
 /*
-1. Display the user’s name and skin type under their customer profile.
-2. Display the appropriate facial treatments for their skin type.
-3. Display the description of the spa’s manicures or pedicures depending on the user’s interest 
+2. Modify the form to allow the user to select either a manicure or pedicure or both. If the user selects both, display both 
+the manicure and pedicure descriptions in the Menu view.
+3. Work with routes and paths to display the spa menu page on a separate route from the form
 */

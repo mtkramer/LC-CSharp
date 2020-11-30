@@ -9,20 +9,35 @@
     <p>Your @ViewBag.skinType skin type is best suited to the follow facial types:</p>
 
     <ul>
-        @foreach(string facial in ViewBag.appropriateFacials)
+        @foreach (string facial in ViewBag.appropriateFacials)
         {
             <li>@facial</li>
         }
     </ul>
 
     <h5>Nail Services</h5>
-    @if(ViewBag.maniPedi == "manicure")
+    @if (ViewBag.maniPedi == "manicure")
     {
         <p>Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
     }
-    else if(ViewBag.maniPedi == "pedicure")
+    else if (ViewBag.maniPedi == "pedicure")
     {
         <p>Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
     }
+    else if (ViewBag.maniPedi == "both")
+    {
+        <p>Our manicure is a great way to spend 30 minutes of your day! We use shea butter hand cream and the finest gel polish.</p>
+        <p>Relax for 45 minutes in pure luxury! Our massage chairs and experienced nail techs are here to get your feet in shape for sandal season!</p>
+    }
 
+</div>
+<p>Fingernail Polish Choices:</p>
+<div style="display:flex">
+    <div class="nail-color" style="background-color:red"></div>
+    <div class="nail-color" style="background-color:orange"></div>
+    <div class="nail-color" style="background-color:yellow"></div>
+    <div class="nail-color" style="background-color:green"></div>
+    <div class="nail-color" style="background-color:blue"></div>
+    <div class="nail-color" style="background-color:indigo"></div>
+    <div class="nail-color" style="background-color:violet"></div>
 </div>

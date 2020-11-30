@@ -68,7 +68,5 @@ namespace SpaDay.Controllers
     }
 }
 /*
-2. Modify the form to allow the user to select either a manicure or pedicure or both. If the user selects both, display both 
-the manicure and pedicure descriptions in the Menu view.
 3. Work with routes and paths to display the spa menu page on a separate route from the form
 */

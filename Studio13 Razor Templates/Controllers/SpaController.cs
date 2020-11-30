@@ -39,7 +39,7 @@ namespace SpaDay.Controllers
         }
 
         [HttpPost]
-        [Route("/spa")]
+        [Route("/menu")]
         public IActionResult Menu(string name, string skinType, string maniPedi)
         {
             List<string> facials = new List<string>()
@@ -67,6 +67,3 @@ namespace SpaDay.Controllers
 
     }
 }
-/*
-3. Work with routes and paths to display the spa menu page on a separate route from the form
-*/

@@ -20,6 +20,8 @@ namespace Exercise14_Models.Models
             nextId++;
         }
 
+        public Event() { Id = nextId; nextId++; } // constructor required for model binding in EventsController.NewEvent
+
         public override string ToString()
         {
             return $"{Name}: {Description} id: {Id}";

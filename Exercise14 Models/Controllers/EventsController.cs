@@ -1,15 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Exercise14_Models.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Exercise14_Models.Controllers
 {
     public class EventsController : Controller
     {
 
-        static private Dictionary<string, string> Events = new Dictionary<string, string>();
+        static private List<Event> Events = new List<Event>();
 
         // GET: /<controller>/
         public IActionResult Index()
@@ -26,10 +24,9 @@ namespace Exercise14_Models.Controllers
 
         [HttpPost]
         [Route("Events/Add")]
-        public IActionResult NewEvent(string name, string desc = "")
+        public IActionResult NewEvent(string name, string description)
         {
-            Events.Add(name, desc);
-
+            Events.Add(new Event(name, description));
 
             return Redirect("/Events");
         }

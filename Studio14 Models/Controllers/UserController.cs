@@ -13,7 +13,7 @@ namespace Studio14_Models.Controllers
 
         public IActionResult Add()
         {
-            ViewBag.verify = true;
+            ViewBag.displayReverify = false;
 
             return View();
         }
@@ -22,14 +22,15 @@ namespace Studio14_Models.Controllers
         [Route("/user/add")]
         public IActionResult SubmitUserAddForm(User newUser, string verifyPassword)
         {
+            ViewBag.newUser = newUser;
+
             if (newUser.Password != verifyPassword)
             {
-                ViewBag.newUser = newUser;
-                ViewBag.verify = false;
+                ViewBag.displayReverify = true;
                 return View("Add");
             }
 
-            return Redirect("/spa");
+            return View("Index");
         }
     }
 }

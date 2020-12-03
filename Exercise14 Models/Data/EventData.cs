@@ -25,6 +25,13 @@ namespace Exercise14_Models.Data
             Events.Remove(id);
         }
 
+        // Edit
+        public static void Edit(int id, string name, string description)
+        {
+            Events[id].Name = name;
+            Events[id].Description = description;
+        }
+
         // GetById
         public static Event GetById(int id)
         {

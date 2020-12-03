@@ -34,3 +34,7 @@ namespace Studio14_Models.Controllers
         }
     }
 }
+/*
+Add a Date property in User, and initialize it to the time the user joined (i.e. when the User object was created).
+At the bottom of User/Index.cshtml, add a div. Inside that element, add account details such as the user’s email and the date they joined.
+*/

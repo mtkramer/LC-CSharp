@@ -63,7 +63,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise13 Razor Templates"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Studio13 Razor Templates", "Studio13 Razor Templates\Studio13 Razor Templates.csproj", "{BDA6115F-6FF9-4037-B4A8-05B8F1119F98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise14 Models", "Exercise14 Models\Exercise14 Models.csproj", "{915478FB-0060-4E09-9CE7-7F2AA7C633FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise14 Models", "Exercise14 Models\Exercise14 Models.csproj", "{915478FB-0060-4E09-9CE7-7F2AA7C633FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Studio14 Models", "Studio14 Models\Studio14 Models.csproj", "{01448964-4E1D-42FF-9B6E-44540DDBA7C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +185,10 @@ Global
 		{915478FB-0060-4E09-9CE7-7F2AA7C633FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915478FB-0060-4E09-9CE7-7F2AA7C633FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915478FB-0060-4E09-9CE7-7F2AA7C633FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01448964-4E1D-42FF-9B6E-44540DDBA7C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01448964-4E1D-42FF-9B6E-44540DDBA7C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01448964-4E1D-42FF-9B6E-44540DDBA7C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01448964-4E1D-42FF-9B6E-44540DDBA7C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,6 +222,7 @@ Global
 		{B9DBAC32-6C5D-4887-A886-77B9E0072EA8} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 		{BDA6115F-6FF9-4037-B4A8-05B8F1119F98} = {7969C462-8682-4890-B5C6-7F25C18E8185}
 		{915478FB-0060-4E09-9CE7-7F2AA7C633FD} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
+		{01448964-4E1D-42FF-9B6E-44540DDBA7C2} = {7969C462-8682-4890-B5C6-7F25C18E8185}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C89A3ACB-845F-4781-9325-04DD532ED86E}

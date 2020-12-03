@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Studio14_Models.Models;
 
 namespace Studio14_Models.Controllers
 {
@@ -14,10 +11,25 @@ namespace Studio14_Models.Controllers
             return View();
         }
 
-        // GET: /<controller>/add
         public IActionResult Add()
         {
+            ViewBag.verify = true;
+
             return View();
+        }
+
+        [HttpPost]
+        [Route("/user/add")]
+        public IActionResult SubmitUserAddForm(User newUser, string verifyPassword)
+        {
+            if (newUser.Password != verifyPassword)
+            {
+                ViewBag.newUser = newUser;
+                ViewBag.verify = false;
+                return View("Add");
+            }
+
+            return Redirect("/spa");
         }
     }
 }

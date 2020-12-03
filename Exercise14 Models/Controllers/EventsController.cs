@@ -1,18 +1,16 @@
 ﻿using Exercise14_Models.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
+using Exercise14_Models.Data;
 
 namespace Exercise14_Models.Controllers
 {
     public class EventsController : Controller
     {
 
-        static private List<Event> Events = new List<Event>();
-
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewBag.events = Events;
+            ViewBag.events = EventData.GetAll();
 
             return View();
         }
@@ -26,7 +24,26 @@ namespace Exercise14_Models.Controllers
         [Route("Events/Add")]
         public IActionResult NewEvent(string name, string description)
         {
-            Events.Add(new Event(name, description));
+            EventData.Add(new Event(name, description));
+
+            return Redirect("/Events");
+        }
+
+        public IActionResult Delete()
+        {
+            ViewBag.events = EventData.GetAll();
+
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Events/Delete")]
+        public IActionResult DeleteEvent(int[] eventIds)
+        {
+            foreach(int id in eventIds)
+            {
+                EventData.Remove(id);
+            }
 
             return Redirect("/Events");
         }

@@ -1,5 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<h1>Add User</h1>
+<form method="post">
+    <div class="form-group">
+        <label>
+            Username:
+            <input type="text" name="username" autofocus/>
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            Email:
+            <input type="email" name="email" />
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            Password:
+            <input type="password" name="password" />
+        </label>
+        <label>
+            Verify Password:
+            <input type="password" name="verifyPassword" />
+        </label>
+    </div>
+    <input type="submit" value="Create User"/>
+</form>

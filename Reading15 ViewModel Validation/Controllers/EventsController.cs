@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Reading15_ViewModel_Validation.Models;
 using Reading15_ViewModel_Validation.Data;
+using System.Collections.Generic;
 
 namespace Reading15_ViewModel_Validation.Controllers
 {
@@ -10,9 +11,9 @@ namespace Reading15_ViewModel_Validation.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewBag.events = EventData.GetAll();
+            List<Event> events = new List<Event>(EventData.GetAll());
 
-            return View();
+            return View(events);
         }
 
         public IActionResult Add()

@@ -2,6 +2,7 @@
 using Reading15_ViewModel_Validation.Models;
 using Reading15_ViewModel_Validation.Data;
 using System.Collections.Generic;
+using Reading15_ViewModel_Validation.ViewModels;
 
 namespace Reading15_ViewModel_Validation.Controllers
 {
@@ -18,14 +19,16 @@ namespace Reading15_ViewModel_Validation.Controllers
 
         public IActionResult Add()
         {
-            return View();
+            AddEventViewModel addEventViewModel = new AddEventViewModel();
+
+            return View(addEventViewModel);
         }
 
         [HttpPost]
-        [Route("Events/Add")]
-        public IActionResult NewEvent(Event newEvent)
+        public IActionResult Add(AddEventViewModel addEventViewModel)
         {
-            EventData.Add(newEvent);
+            Event evt = new Event(addEventViewModel.Name, addEventViewModel.Description);
+            EventData.Add(evt);
 
             return Redirect("/Events");
         }

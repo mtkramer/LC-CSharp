@@ -14,5 +14,12 @@ namespace Exercise15_ViewModel_Validation.ViewModels
 
         [EmailAddress]
         public string ContactEmail { get; set; }
+
+        [Required(ErrorMessage = "Event must have a location.")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "Please enter the location of the event.")]
+        public string Location { get; set; }
+
+        [Range(0, 100000, ErrorMessage = "Event tickets must be between 0 and 100,000")]
+        public int NumberOfTickets { get; set; }
     }
 }

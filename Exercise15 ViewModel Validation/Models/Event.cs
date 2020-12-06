@@ -10,6 +10,10 @@ namespace Exercise15_ViewModel_Validation.Models
 
         public string ContactEmail { get; set; }
 
+        public string Location { get; set; }
+
+        public int NumberOfTickets { get; set; }
+
         public int Id { get; }
         static private int nextId = 1;
 
@@ -19,11 +23,13 @@ namespace Exercise15_ViewModel_Validation.Models
             nextId++;
         }
 
-        public Event(string name, string description, string contactEmail) : this()
+        public Event(string name, string description, string contactEmail, string location, int numberOfTickets) : this()
         {
             Name = name;
             Description = description;
             ContactEmail = contactEmail;
+            Location = location;
+            NumberOfTickets = numberOfTickets;
         }
 
         public override string ToString()

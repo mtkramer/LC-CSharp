@@ -33,7 +33,9 @@ namespace Exercise15_ViewModel_Validation.Controllers
                 EventData.Add(new Event(
                     addEventViewModel.Name,
                     addEventViewModel.Description,
-                    addEventViewModel.ContactEmail
+                    addEventViewModel.ContactEmail,
+                    addEventViewModel.Location,
+                    addEventViewModel.NumberOfTickets
                 ));
                 return Redirect("/Events");
             }

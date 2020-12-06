@@ -27,9 +27,19 @@ namespace Reading15_ViewModel_Validation.Controllers
         [HttpPost]
         public IActionResult Add(AddEventViewModel addEventViewModel)
         {
-            EventData.Add(new Event(addEventViewModel.Name, addEventViewModel.Description, addEventViewModel.ContactEmail));
 
-            return Redirect("/Events");
+            if (ModelState.IsValid)
+            {
+                EventData.Add(new Event(
+                    addEventViewModel.Name, 
+                    addEventViewModel.Description, 
+                    addEventViewModel.ContactEmail
+                ));
+                return Redirect("/Events");
+            }
+
+            return View(addEventViewModel);
+            
         }
 
         public IActionResult Delete()

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Studio15_ViewModel_Validation.Models;
 using Studio15_ViewModel_Validation.ViewModels;
 
 namespace Studio15_ViewModel_Validation.Controllers
@@ -12,13 +11,14 @@ namespace Studio15_ViewModel_Validation.Controllers
             return View();
         }
 
-        public IActionResult Add(AddUserViewModel addUserViewModel)
+        public IActionResult Add()
         {
-            return View(addUserViewModel);
+            ViewBag.DisplayVerify = false;
+            return View();
         }
 
         [HttpPost]
-        [Route("/user")]
+        [Route("/user/add")]
         public IActionResult SubmitAddUserForm(AddUserViewModel addUserViewModel)
         {
             if (ModelState.IsValid)
@@ -28,11 +28,12 @@ namespace Studio15_ViewModel_Validation.Controllers
                     return View("Index", addUserViewModel);
                 }
 
-                ViewBag.error = "Passwords do not match. Please try again.";
+                ViewBag.DisplayVerify = true;
                 return View("Add", addUserViewModel);
             }
 
-            return View("Add");
+            ViewBag.DisplayVerify = true;
+            return View("Add", addUserViewModel);
         }
 
     }

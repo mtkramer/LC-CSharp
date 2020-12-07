@@ -6,17 +6,18 @@ namespace Studio15_ViewModel_Validation.ViewModels
     {
         [Required(ErrorMessage = "A username is required.")]
         [StringLength(15, MinimumLength = 5, ErrorMessage = "Valid usernames must be between 5 and 15 characters.")]
-        public string Username { get; set; } = "";
+        public string Username { get; set; }
 
         [EmailAddress]
-        public string Email { get; set; } = "";
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "A password is required.")]
         [StringLength(20, MinimumLength = 6, ErrorMessage = "Valid passwords must be between 6 and 20 characters.")]
-        public string Password { get; set; } = "";
+        public string Password { get; set; }
 
         [Required(ErrorMessage = "Password verification is required.")]
-        public string VerifyPassword { get; set; } = "";
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "Password and Confirm Password must match.")]
+        public string VerifyPassword { get; set; }
 
     }
 }

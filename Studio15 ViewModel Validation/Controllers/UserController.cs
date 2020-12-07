@@ -13,8 +13,9 @@ namespace Studio15_ViewModel_Validation.Controllers
 
         public IActionResult Add()
         {
-            ViewBag.DisplayVerify = false;
-            return View();
+            AddUserViewModel addUserViewModel = new AddUserViewModel();
+
+            return View(addUserViewModel);
         }
 
         [HttpPost]
@@ -27,12 +28,8 @@ namespace Studio15_ViewModel_Validation.Controllers
                 {
                     return View("Index", addUserViewModel);
                 }
-
-                ViewBag.DisplayVerify = true;
-                return View("Add", addUserViewModel);
             }
 
-            ViewBag.DisplayVerify = true;
             return View("Add", addUserViewModel);
         }
 

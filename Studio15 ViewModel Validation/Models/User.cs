@@ -7,15 +7,13 @@ namespace Studio15_ViewModel_Validation.Models
         public string Email { get; set; }
         public string Password { get; set; }
 
-        public User()
-        {
-        }
+        public User() {  }
 
-        public User(string u, string e, string p)
+        public User(string username, string email, string password)
         {
-            Username = u;
-            Email = e;
-            Password = p;
+            Username = username;
+            Email = email;
+            Password = password;
         }
 
     }

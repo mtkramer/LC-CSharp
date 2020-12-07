@@ -16,7 +16,7 @@ namespace Studio15_ViewModel_Validation.ViewModels
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Password verification is required.")]
-        [StringLength(20, MinimumLength = 6, ErrorMessage = "Password and Confirm Password must match.")]
+        [Compare("Password", ErrorMessage = "Password and Confirm Password must match.")]
         public string VerifyPassword { get; set; }
 
     }

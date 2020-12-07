@@ -1,4 +1,7 @@
-﻿<h1>Sign Up Form</h1>
+﻿@using Studio15_ViewModel_Validation.ViewModels;
+@model AddUserViewModel
+
+<h1>Sign Up Form</h1>
 
 @if (ViewBag.error != null)
 {
@@ -6,34 +9,29 @@
 }
 
 <form method="post" action="/user">
-    Username:
-    <br>
-    @if (ViewBag.error == null)
-    {
-        <input type="text" name="username" />
-    }
-    else
-    {
-        <input type="text" name="username" value="@ViewBag.userName" />
-    }
-    <br>
-    Email:
-    <br>
-    @if (ViewBag.error == null)
-    {
-        <input type="email" name="email" />
-    }
-    else
-    {
-        <input type="email" name="email" value="@ViewBag.eMail" />
-    }
-    <br>
-    Password:
-    <input type="password" name="password" />
-    <br>
-    Confirm Password:
-    <br>
-    <input type="password" name="verify" />
-    <br>
+    <div class="form-group">
+        <label asp-for="Username">
+            Username: <input asp-for="Username" value="@Model.Username" />
+            <span asp-validation-for="Username" style="color:red"></span>
+        </label>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">
+            Email: <input type="Email" asp-for="Email" value="@Model.Email" />
+            <span asp-validation-for="Email" style="color:red"></span>
+        </label>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password">
+            Password: <input type="password" asp-for="Password" value="@Model.Password" />
+            <span asp-validation-for="Password" style="color:red"></span>
+        </label>
+    </div>
+    <div class="form-group">
+        <label asp-for="VerifyPassword">
+            Confirm Password: <input type="password" asp-for="VerifyPassword" value="@Model.VerifyPassword" />
+            <span asp-validation-for="VerifyPassword" style="color:red"></span>
+        </label>
+    </div>
     <input type='submit' value='Submit'>
 </form>

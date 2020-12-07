@@ -24,10 +24,7 @@ namespace Studio15_ViewModel_Validation.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (addUserViewModel.Password == addUserViewModel.VerifyPassword)
-                {
-                    return View("Index", addUserViewModel);
-                }
+                return View("Index", addUserViewModel);
             }
 
             return View("Add", addUserViewModel);

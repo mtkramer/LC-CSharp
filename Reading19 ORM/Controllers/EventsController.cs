@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using Reading19_ORM.Data;
 using Reading19_ORM.Models;
 using Reading19_ORM.ViewModels;
+using System.Linq;  // required to cast DbSet<Event> to List<Event>
 
 namespace Reading19_ORM.Controllers
 {
     public class EventsController : Controller
     {
+        private EventDbContext context;
+
+        public EventsController(EventDbContext dbContext) { context = dbContext; }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
-            List<Event> events = new List<Event>(EventData.GetAll());
+            List<Event> events = context.Events.ToList();
 
             return View(events);
         }
@@ -36,7 +41,8 @@ namespace Reading19_ORM.Controllers
                     Type = addEventViewModel.Type
                 };
 
-                EventData.Add(newEvent);
+                context.Events.Add(newEvent);
+                context.SaveChanges();
 
                 return Redirect("/Events");
             }
@@ -46,7 +52,7 @@ namespace Reading19_ORM.Controllers
 
         public IActionResult Delete()
         {
-            ViewBag.events = EventData.GetAll();
+            ViewBag.events = context.Events.ToList();
 
             return View();
         }
@@ -56,8 +62,10 @@ namespace Reading19_ORM.Controllers
         {
             foreach (int eventId in eventIds)
             {
-                EventData.Remove(eventId);
+                context.Events.Remove(context.Events.Find(eventId));
             }
+
+            context.SaveChanges();
 
             return Redirect("/Events");
         }

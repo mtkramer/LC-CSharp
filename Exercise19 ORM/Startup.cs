@@ -21,6 +21,7 @@ namespace Exercise19_ORM
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddControllersWithViews();
             services.AddDbContext<EventDbContext>(options =>
                 options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
         }

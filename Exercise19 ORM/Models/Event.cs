@@ -24,6 +24,9 @@ namespace Exercise19_ORM.Models
             return obj is Event @event &&
                    Id == @event.Id;
         }
-        public override int GetHashCode() { return HashCode.Combine(Id); }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Id);
+        }
     }
 }

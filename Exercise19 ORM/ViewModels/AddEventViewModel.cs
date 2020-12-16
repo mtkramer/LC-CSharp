@@ -1,7 +1,7 @@
-﻿using Exercise19_ORM.Models;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Exercise19_ORM.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Exercise19_ORM.ViewModels
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise19_ORM.Models
+namespace Exercise19_Persistent_Data.Models
 {
     public class Event
     {
@@ -24,9 +24,6 @@ namespace Exercise19_ORM.Models
             return obj is Event @event &&
                    Id == @event.Id;
         }
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
+        public override int GetHashCode() { return HashCode.Combine(Id); }
     }
 }

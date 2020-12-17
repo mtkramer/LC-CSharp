@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using Exercise19_ORM.Models;
+﻿using Exercise19_Persistent_Data.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
-namespace Exercise19_ORM.ViewModels
+namespace Exercise19_Persistent_Data.ViewModels
 {
     public class AddEventViewModel
     {

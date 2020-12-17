@@ -1,4 +1,4 @@
-﻿using Exercise19_ORM.Models;
+﻿using Exercise19_Persistent_Data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Exercise19_ORM.Controllers
+namespace Exercise19_Persistent_Data.Controllers
 {
     public class HomeController : Controller
     {

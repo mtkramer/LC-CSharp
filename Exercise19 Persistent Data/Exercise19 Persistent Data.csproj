@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>Exercise19_ORM</RootNamespace>
+    <RootNamespace>Exercise19_Persistent_Data</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

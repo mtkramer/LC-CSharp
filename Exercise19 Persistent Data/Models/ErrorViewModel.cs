@@ -1,6 +1,6 @@
 using System;
 
-namespace Exercise19_ORM.Models
+namespace Exercise19_Persistent_Data.Models
 {
     public class ErrorViewModel
     {

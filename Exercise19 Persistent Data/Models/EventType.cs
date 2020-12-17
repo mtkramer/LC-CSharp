@@ -1,6 +1,6 @@
 ﻿
 
-namespace Exercise19_ORM.Models
+namespace Exercise19_Persistent_Data.Models
 {
     public enum EventType
     {

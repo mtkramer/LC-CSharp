@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Exercise19_ORM
+namespace Exercise19_Persistent_Data
 {
     public class Program
     {

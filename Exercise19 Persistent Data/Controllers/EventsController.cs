@@ -1,11 +1,11 @@
-﻿using Exercise19_ORM.Data;
-using Exercise19_ORM.Models;
-using Exercise19_ORM.ViewModels;
+﻿using Exercise19_Persistent_Data.Data;
+using Exercise19_Persistent_Data.Models;
+using Exercise19_Persistent_Data.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Exercise19_ORM.Controllers
+namespace Exercise19_Persistent_Data.Controllers
 {
     public class EventsController : Controller
     {

@@ -7,12 +7,12 @@ using System.Linq;
 
 namespace Exercise19_Persistent_Data.Controllers
 {
-    public class EventsController : Controller
+    public class EventController : Controller
     {
 
         private EventDbContext context;
 
-        public EventsController(EventDbContext dbContext) { context = dbContext; }
+        public EventController(EventDbContext dbContext) { context = dbContext; }
 
         // GET: /<controller>/
         public IActionResult Index()
@@ -45,7 +45,7 @@ namespace Exercise19_Persistent_Data.Controllers
                 context.Events.Add(newEvent);
                 context.SaveChanges();
 
-                return Redirect("/Events");
+                return Redirect("/Event");
             }
 
             return View(addEventViewModel);
@@ -69,7 +69,7 @@ namespace Exercise19_Persistent_Data.Controllers
 
             context.SaveChanges();
 
-            return Redirect("/Events");
+            return Redirect("/Event");
         }
     }
 }

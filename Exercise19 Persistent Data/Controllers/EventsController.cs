@@ -12,10 +12,7 @@ namespace Exercise19_Persistent_Data.Controllers
 
         private EventDbContext context;
 
-        public EventsController(EventDbContext dbContext)
-        {
-            context = dbContext;
-        }
+        public EventsController(EventDbContext dbContext) { context = dbContext; }
 
         // GET: /<controller>/
         public IActionResult Index()

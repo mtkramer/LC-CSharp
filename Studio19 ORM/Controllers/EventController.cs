@@ -1,0 +1,75 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Studio19_ORM.Data;
+using Studio19_ORM.Models;
+using Studio19_ORM.ViewModels;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Studio19_ORM.Controllers
+{
+    public class EventController : Controller
+    {
+
+        private EventDbContext context;
+
+        public EventController(EventDbContext dbContext) { context = dbContext; }
+
+        // GET: /<controller>/
+        public IActionResult Index()
+        {
+            List<Event> events = context.Events.ToList();
+
+            return View(events);
+        }
+
+        public IActionResult Add()
+        {
+            AddEventViewModel addEventViewModel = new AddEventViewModel();
+
+            return View(addEventViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Add(AddEventViewModel addEventViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Event newEvent = new Event
+                {
+                    Name = addEventViewModel.Name,
+                    Description = addEventViewModel.Description,
+                    ContactEmail = addEventViewModel.ContactEmail,
+                    Type = addEventViewModel.Type
+                };
+
+                context.Events.Add(newEvent);
+                context.SaveChanges();
+
+                return Redirect("/Event");
+            }
+
+            return View(addEventViewModel);
+        }
+
+        public IActionResult Delete()
+        {
+            ViewBag.events = context.Events.ToList();
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int[] eventIds)
+        {
+            foreach (int eventId in eventIds)
+            {
+                Event theEvent = context.Events.Find(eventId);
+                context.Events.Remove(theEvent);
+            }
+
+            context.SaveChanges();
+
+            return Redirect("/Event");
+        }
+    }
+}

@@ -13,20 +13,12 @@ else
 {
     <table class="table">
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Contact Email</th>
-            <th>Event Type</th>
+            <th>Id</th><th>Name</th><th>Description</th><th>Contact Email</th><th>Event Type</th>
         </tr>
         @foreach (var evt in Model)
         {
             <tr>
-                <td>@evt.Id</td>
-                <td>@evt.Name</td>
-                <td>@evt.Description</td>
-                <td>@evt.ContactEmail</td>
-                <td>@evt.Type</td>
+                <td>@evt.Id</td><td>@evt.Name</td><td>@evt.Description</td><td>@evt.ContactEmail</td><td>@evt.Type</td>
             </tr>
         }
     </table>

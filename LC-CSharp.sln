@@ -81,6 +81,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Studio19 ORM", "Studio19 OR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reading20 ORM Relationships", "Reading20 ORM Relationships\Reading20 ORM Relationships.csproj", "{E34482C4-0701-44A2-826A-31FD09BDB11E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises20 ORM Relationships", "Exercises20 ORM Relationships\Exercises20 ORM Relationships.csproj", "{FF18E297-F808-4C46-ACC0-A6E8D5BD4D52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{E34482C4-0701-44A2-826A-31FD09BDB11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E34482C4-0701-44A2-826A-31FD09BDB11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E34482C4-0701-44A2-826A-31FD09BDB11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF18E297-F808-4C46-ACC0-A6E8D5BD4D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF18E297-F808-4C46-ACC0-A6E8D5BD4D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF18E297-F808-4C46-ACC0-A6E8D5BD4D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF18E297-F808-4C46-ACC0-A6E8D5BD4D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,6 +278,7 @@ Global
 		{B586DF1E-8EE6-4F21-9576-D69FA7339F66} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 		{D8459F9B-58CE-4287-8B21-8E067ABDC8EB} = {7969C462-8682-4890-B5C6-7F25C18E8185}
 		{E34482C4-0701-44A2-826A-31FD09BDB11E} = {CC1B9C7A-E662-4919-9E23-A4F9BB85CED6}
+		{FF18E297-F808-4C46-ACC0-A6E8D5BD4D52} = {E2D578E5-65A7-4451-9A91-7AB0D2DF1D7E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C89A3ACB-845F-4781-9325-04DD532ED86E}

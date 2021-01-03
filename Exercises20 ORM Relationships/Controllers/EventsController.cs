@@ -1,4 +1,4 @@
-﻿using CodingEventsDemo.ViewModels;
+﻿using Exercises20_ORM_Relationships.ViewModels;
 using Exercises20_ORM_Relationships.Data;
 using Exercises20_ORM_Relationships.Models;
 using Microsoft.AspNetCore.Mvc;

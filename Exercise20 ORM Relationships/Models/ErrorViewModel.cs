@@ -1,6 +1,6 @@
 using System;
 
-namespace Exercises20_ORM_Relationships.Models
+namespace Exercise20_ORM_Relationships.Models
 {
     public class ErrorViewModel
     {

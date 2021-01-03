@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Exercise4_Classes_Pt1
+namespace Exercise4
 {
     class Course
     {

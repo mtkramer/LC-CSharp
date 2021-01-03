@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Exercises20_ORM_Relationships
+namespace Exercise20_ORM_Relationships
 {
     public class Program
     {

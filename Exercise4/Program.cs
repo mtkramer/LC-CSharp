@@ -1,7 +1,6 @@
 ﻿using System;
 
-
-namespace Exercise4_Classes_Pt1
+namespace Exercise4
 {
     class Program
     {

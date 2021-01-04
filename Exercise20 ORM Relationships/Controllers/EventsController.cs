@@ -2,6 +2,7 @@
 using Exercise20_ORM_Relationships.Models;
 using Exercise20_ORM_Relationships.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,14 +21,14 @@ namespace Exercise20_ORM_Relationships.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            List<Event> events = context.Events.ToList();
+            List<Event> events = context.Events.Include(e => e.Category).ToList();  //force ef eager loading
 
             return View(events);
         }
 
         public IActionResult Add()
         {
-            AddEventViewModel addEventViewModel = new AddEventViewModel();
+            AddEventViewModel addEventViewModel = new AddEventViewModel(context.Categories.ToList());
 
             return View(addEventViewModel);
         }

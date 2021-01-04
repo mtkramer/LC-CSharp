@@ -37,12 +37,13 @@ namespace Exercise20_ORM_Relationships.Controllers
         {
             if (ModelState.IsValid)
             {
+                EventCategory category = context.Categories.Find(addEventViewModel.CategoryId);
                 Event newEvent = new Event
                 {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
                     ContactEmail = addEventViewModel.ContactEmail,
-                    Type = addEventViewModel.Type
+                    Category = category
                 };
 
                 context.Events.Add(newEvent);

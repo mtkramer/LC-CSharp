@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Exercise20_ORM_Relationships.Models
+﻿namespace Exercise20_ORM_Relationships.Models
 {
     public class Tag
     {

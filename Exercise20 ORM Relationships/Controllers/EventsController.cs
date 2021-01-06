@@ -76,5 +76,13 @@ namespace Exercise20_ORM_Relationships.Controllers
 
             return Redirect("/Events");
         }
+
+        public IActionResult Detail(int id)
+        {
+            Event evt = context.Events.Include(e => e.Category).Single(e => e.Id == id);
+            EventDetailViewModel viewModel = new EventDetailViewModel(evt);
+
+            return View(viewModel);
+        }
     }
 }

@@ -79,6 +79,7 @@ namespace Exercise20_ORM_Relationships.Controllers
 
         public IActionResult Detail(int id)
         {
+            // .Include() cannot be chained with .Find() so .Single() is used instead
             Event evt = context.Events.Include(e => e.Category).Single(e => e.Id == id);
             EventDetailViewModel viewModel = new EventDetailViewModel(evt);
 

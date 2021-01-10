@@ -12,16 +12,13 @@ namespace Exercise20_ORM_Relationships.Controllers
     {
 
         private EventDbContext context;
-
-        public EventsController(EventDbContext dbContext)
-        {
-            context = dbContext;
-        }
+        public EventsController(EventDbContext dbContext) { context = dbContext; }
 
         // GET: /<controller>/
         public IActionResult Index()
         {
-            List<Event> events = context.Events.Include(e => e.Category).ToList();  //force ef eager loading
+            // use .Include() to force ef eager loading
+            List<Event> events = context.Events.Include(e => e.Category).ToList();
 
             return View(events);
         }

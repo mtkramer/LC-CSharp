@@ -1,0 +1,13 @@
+﻿@model Exercise20_ORM_Relationships.ViewModels.AddEventTagViewModel
+
+<h1>Add Event: @Model.Event.Name</h1>
+
+<form asp-controller="Tag" asp-action="AddEvent" method="post">
+    <input type="hidden" value="@Model.Event.Id" name="EventId" />
+    <div class="form-group">
+        <lable asp-for="TagId">Select Tag</lable>
+        <select asp-for="TagId" asp-items="Model.Tags"></select>
+        <span asp-validation-for="TagId" style="color:red"></span>
+    </div>
+    <input type="submit" value="Add Tag" />
+</form>

@@ -78,14 +78,15 @@ namespace Exercise20_ORM_Relationships.Controllers
         {
             // .Include() cannot be chained with .Find() so .Single() is used instead
             Event evt = context.Events.Include(e => e.Category).Single(e => e.Id == id);
-            EventDetailViewModel viewModel = new EventDetailViewModel(evt);
 
             List<EventTag> eventTags = context.EventTags
                 .Where(et => et.EventId == id)
                 .Include(et => et.Tag)
                 .ToList();
 
-            return View(viewModel, eventTags);
+            EventDetailViewModel viewModel = new EventDetailViewModel(evt, eventTags);
+
+            return View(viewModel);
         }
     }
 }

@@ -5,6 +5,7 @@ namespace Exercise20_ORM_Relationships.ViewModels
 {
     public class EventDetailViewModel
     {
+        public int EventId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string ContactEmail { get; set; }
@@ -13,6 +14,7 @@ namespace Exercise20_ORM_Relationships.ViewModels
 
         public EventDetailViewModel (Event evt, List<EventTag> eventTags)
         {
+            EventId = evt.Id;
             Name = evt.Name;
             Description = evt.Description;
             ContactEmail = evt.ContactEmail;

@@ -80,7 +80,12 @@ namespace Exercise20_ORM_Relationships.Controllers
             Event evt = context.Events.Include(e => e.Category).Single(e => e.Id == id);
             EventDetailViewModel viewModel = new EventDetailViewModel(evt);
 
-            return View(viewModel);
+            List<EventTag> eventTags = context.EventTags
+                .Where(et => et.EventId == id)
+                .Include(et => et.Tag)
+                .ToList();
+
+            return View(viewModel, eventTags);
         }
     }
 }

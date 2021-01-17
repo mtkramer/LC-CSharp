@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Reading21_Authentication.Models;
 
 namespace Reading21_Authentication.Data
 {
-    public class EventDbContext : DbContext
+    public class EventDbContext : IdentityDbContext<IdentityUser>
     {
         public DbSet<Event> Events { get; set; }
         public DbSet<EventCategory> Categories { get; set; }
@@ -18,6 +20,7 @@ namespace Reading21_Authentication.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EventTag>().HasKey(et => new { et.EventId, et.TagId });
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

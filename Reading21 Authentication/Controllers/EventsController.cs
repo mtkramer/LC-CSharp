@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Reading21_Authentication.Data;
 using Reading21_Authentication.Models;
@@ -8,6 +9,7 @@ using System.Linq;
 
 namespace Reading21_Authentication.Controllers
 {
+    [Authorize]
     public class EventsController : Controller
     {
 
@@ -18,6 +20,7 @@ namespace Reading21_Authentication.Controllers
             context = dbContext;
         }
 
+        [AllowAnonymous]
         // GET: /<controller>/
         public IActionResult Index()
         {

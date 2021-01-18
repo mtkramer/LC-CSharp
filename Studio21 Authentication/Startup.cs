@@ -21,7 +21,10 @@ namespace Studio21_Authentication
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.Configure<IdentityOptions>(options => options.Password.RequiredLength = 8);
+            services.Configure<IdentityOptions>(options => {
+                options.Password.RequiredLength = 8;
+                options.Password.RequireUppercase = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

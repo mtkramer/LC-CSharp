@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Studio21_Authentication.Data;
 using Studio21_Authentication.Models;
 using Studio21_Authentication.ViewModels;
@@ -7,6 +8,7 @@ using System.Linq;
 
 namespace Studio21_Authentication.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private JobDbContext context;
@@ -16,6 +18,7 @@ namespace Studio21_Authentication.Controllers
             context = dbContext;
         }
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             List<Job> jobs = context.Jobs.ToList();

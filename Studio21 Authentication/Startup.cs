@@ -21,7 +21,8 @@ namespace Studio21_Authentication
         {
             services.AddControllersWithViews();
             services.AddRazorPages();
-            services.Configure<IdentityOptions>(options => {
+            services.Configure<IdentityOptions>(options => 
+            {
                 options.Password.RequiredLength = 8;
                 options.Password.RequireUppercase = false;
             });

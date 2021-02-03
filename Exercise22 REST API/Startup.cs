@@ -1,12 +1,11 @@
+using Exercise22_REST_API.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.OpenApi.Models;
 
 namespace Exercise22_REST_API
 {
@@ -22,7 +21,23 @@ namespace Exercise22_REST_API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllers();
+
+            services.AddDbContext<CodingEventsDbContext>(o => o.UseSqlite("Data Source=sqlite.db;"));
+
+            services.AddSwaggerGen(
+              options => {
+                  options.SwaggerDoc(
+              "v1",
+              new OpenApiInfo
+                  {
+                      Version = "v1",
+                      Title = "Coding Events API",
+                      Description = "REST API for managing Coding Events"
+                  }
+            );
+              }
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,22 +47,25 @@ namespace Exercise22_REST_API
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
-            app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
-            app.UseAuthorization();
+            app.UseSwagger();
+            app.UseSwaggerUI(
+              options => {
+                  options.RoutePrefix = ""; // root path of the server
+            options.SwaggerEndpoint(
+              "/swagger/v1/swagger.json",
+              "Patrick's Coding Events API Documentation"
+            );
+              }
+            );
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            // run migrations on startup
+            var dbContext = app.ApplicationServices.CreateScope()
+              .ServiceProvider.GetService<CodingEventsDbContext>();
+            dbContext.Database.Migrate();
         }
     }
 }
